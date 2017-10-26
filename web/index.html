@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!-- ComputeDepreciation.html -->
+<html>
+    <head>
+
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+
+        <title>ComputeDepreciation</title>
+        
+        <script>
+            function show(aval) {
+    if (aval == "UP") {
+    consumedUnits.style.display='inline-block';
+    Form.fileURL.focus();
+    } 
+    else{
+    consumedUnits.style.display='none';
+    }
+  }
+  
+ 
+        </script>
+    </head>
+    <body>
+        <form method = "get" action = "ComputeDepreciation.jsp">
+            <h3>Compute Depreciation </h3><br />
+            <br/> <p>Cost
+                <input type ="text" name = "cost" /><br />
+                <br/> Scrap
+                <input type ="text" name ="scrapValue" /><br />
+                <br/> Life
+                <input type ="text" name ="productLife" size ="30"/><br />
+                     
+            
+            <br/> <p> Select a Depreciation form 
+                <select name ="depForms" onclick="java_script_:show(this.options[this.selectedIndex].value)" >
+                    <option value ="SL"> Straight-Line </option>
+                    <option value ="SUM"> Sum-of-the-Years'-Digit </option>
+                    <option value ="UP"> Units-of-Production </option>
+                    <option value ="DDB"> Double--Declining-Balance </option>
+                </select>
+                
+                <div id="consumedUnits" style="display:none">
+                Units expected to be consumed during its useful life
+                <input type ="text" name = "consumeUL" /><br />
+                <label>Enter the units you antecipate you will use each of the years of its useful life</label>
+                <!-- this is the part missing how to display the array -->
+                <script>
+                    for (idx = 0; idx < )
+                    <input type="text" name="item[numbOfYears]" />
+                    
+                    </script>
+                </div>
+                
+                 <p> <input type ="submit" name = "Submit"
+                       value = "Compute Depreciation" />
+                <input type ="reset" value ="Reset" /></p>
+
+        </form>
+
+    </body>
+</html>
+
+
